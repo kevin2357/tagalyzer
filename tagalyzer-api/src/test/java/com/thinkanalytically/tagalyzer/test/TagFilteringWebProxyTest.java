@@ -25,7 +25,7 @@ import org.junit.Test;
 public class TagFilteringWebProxyTest 
 {
 	private static TagFilteringWebProxy _proxy;
-	private static ScriptableBrowser _browser;
+	private static ScriptableBrowser _chromeBrowser;
     
     @BeforeClass
     public static void globalSetup() throws Exception
@@ -39,8 +39,8 @@ public class TagFilteringWebProxyTest
     	_proxy.startup(8089);
     	_proxy.clearInterceptedTags();
     	
-    	_browser = new SeleniumChromeBrowser("localhost",8089);
-    	_browser.startup();
+    	_chromeBrowser = new SeleniumChromeBrowser("localhost",8089);
+    	_chromeBrowser.startup();
     }
     
     @Before
@@ -57,13 +57,13 @@ public class TagFilteringWebProxyTest
     @AfterClass
     public static void globalTearDown() {
     	_proxy.shutdown();
-    	_browser.quit();
+    	_chromeBrowser.quit();
     }
 
     @Test
-    public void testUntaggedPage()
+    public void chromeTestUntaggedSecurePage()
     {
-        CrawledWebPage page = TagFilteringWebProxyTest._browser.getPage("https://www.google.com");
+        CrawledWebPage page = TagFilteringWebProxyTest._chromeBrowser.getPage("https://www.google.com");
         List<Tag> tags = new ArrayList<Tag>();
         for(String tagUri : TagFilteringWebProxyTest._proxy.getInterceptedTags()) {
         	Tag tag = new AdobeAnalyticsTag();
@@ -77,10 +77,10 @@ public class TagFilteringWebProxyTest
     }
     
     @Test
-    public void testSecureTaggedPage()
+    public void chromeTestTaggedSecurePage()
     {
     	_proxy.clearInterceptedTags();
-        CrawledWebPage page = TagFilteringWebProxyTest._browser.getPage("https://securestore.hbo.com/");
+        CrawledWebPage page = TagFilteringWebProxyTest._chromeBrowser.getPage("https://securestore.hbo.com/");
         List<Tag> tags = new ArrayList<Tag>();
         for(String tagUri : TagFilteringWebProxyTest._proxy.getInterceptedTags()) {
         	Tag tag = new AdobeAnalyticsTag();
@@ -93,10 +93,10 @@ public class TagFilteringWebProxyTest
     }
     
     @Test
-    public void testInsecureTaggedPage()
+    public void chromeTestTaggedInsecurePage()
     {
     	_proxy.clearInterceptedTags();
-        CrawledWebPage page = TagFilteringWebProxyTest._browser.getPage("http://store.hbo.com/");
+        CrawledWebPage page = TagFilteringWebProxyTest._chromeBrowser.getPage("http://store.hbo.com/");
         List<Tag> tags = new ArrayList<Tag>();
         for(String tagUri : TagFilteringWebProxyTest._proxy.getInterceptedTags()) {
         	Tag tag = new AdobeAnalyticsTag();
@@ -107,4 +107,5 @@ public class TagFilteringWebProxyTest
         Assert.assertNotNull(page);
         Assert.assertTrue(page.get_tags().size() > 0);
     }
+    
 }

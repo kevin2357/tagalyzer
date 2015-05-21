@@ -54,11 +54,11 @@ public class LittleProxy implements TagFilteringWebProxy {
 								if(httpObject instanceof HttpRequest) {
 									HttpRequest req = (HttpRequest) httpObject;
 									String requestHost = req.headers().get("Host");
-									String fullUri = requestHost + req.getUri();
-									logger.error("Full URI requested is: " + fullUri);
+									String fullUri = req.getUri().startsWith("http") ? req.getUri() : requestHost + req.getUri();
+									//logger.error("Full URI requested is: " + fullUri);
 									for(Pattern pattern : _tagFilters) {
 										if(pattern.matcher(fullUri).matches() ) {
-											logger.error("Matched uri " + fullUri + " to pattern " + pattern.toString());
+											logger.warn("Matched uri " + fullUri + " to pattern " + pattern.toString());
 											_interceptedTags.add(fullUri);
 											return new DefaultFullHttpResponse(
 													HttpVersion.HTTP_1_1,

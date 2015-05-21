@@ -35,6 +35,16 @@
         <artifactId>littleproxy</artifactId>
         <version>1.0.0-beta7</version>
     </dependency>
+     <dependency>
+        <groupId>edu.uci.ics</groupId>
+        <artifactId>crawler4j</artifactId>
+        <version>4.1</version>
+    </dependency>
+<dependency>
+	<groupId>org.xerial</groupId>
+	<artifactId>sqlite-jdbc</artifactId>
+	<version>3.8.10.1</version>
+</dependency>
   </dependencies>
   
 <reporting>

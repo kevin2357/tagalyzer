@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="1" name="com.thinkanalytically.tagalyzer.test.TagFilteringWebProxyTest" time="21.49" errors="0" skipped="0">
+<testsuite tests="3" failures="2" name="com.thinkanalytically.tagalyzer.test.TagFilteringWebProxyTest" time="17.556" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jre1.8.0_45\bin"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="Service Pack 1"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\ktankersley\Documents\eclipse\eclipse-java\workspace\tagalyzer-api"/>
+    <property name="user.dir" value="C:\Users\ktankersley\git\tagalyzer\tagalyzer-api"/>
     <property name="java.runtime.version" value="1.8.0_45-b15"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jre1.8.0_45\lib\endorsed"/>
@@ -26,7 +26,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="C:\Users\ktankersley\Documents\eclipse\eclipse-java\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf495116326541154330.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\ktankersley\Documents\eclipse\eclipse-java\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1172027913497470860.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files (x86)\Java\jre1.8.0_45\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:/Program Files (x86)/Java/jre1.8.0_45/bin/client;C:/Program Files (x86)/Java/jre1.8.0_45/bin;C:/Program Files (x86)/Java/jre1.8.0_45/lib/i386;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Shoreline Communications\ShoreWare Client\;C:\Program Files (x86)\Shoreline Communications\ShoreWare Client\win64;C:\Program Files (x86)\Google\Google Apps Sync\;C:\dev\libs\java\chromedriver;;C:\Program Files (x86)\eclipse-java;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -53,7 +53,7 @@
     <property name="java.ext.dirs" value="C:\Program Files (x86)\Java\jre1.8.0_45\lib\ext;C:\windows\Sun\Java\lib\ext"/>
     <property name="sun.boot.class.path" value="C:\Program Files (x86)\Java\jre1.8.0_45\lib\resources.jar;C:\Program Files (x86)\Java\jre1.8.0_45\lib\rt.jar;C:\Program Files (x86)\Java\jre1.8.0_45\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jre1.8.0_45\lib\jsse.jar;C:\Program Files (x86)\Java\jre1.8.0_45\lib\jce.jar;C:\Program Files (x86)\Java\jre1.8.0_45\lib\charsets.jar;C:\Program Files (x86)\Java\jre1.8.0_45\lib\jfr.jar;C:\Program Files (x86)\Java\jre1.8.0_45\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Users\ktankersley\Documents\eclipse\eclipse-java\workspace\tagalyzer-api\EMBEDDED"/>
+    <property name="maven.home" value="C:\Users\ktankersley\git\tagalyzer\tagalyzer-api\EMBEDDED"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -61,12 +61,13 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
-  <testcase classname="com.thinkanalytically.tagalyzer.test.TagFilteringWebProxyTest" name="testSecureTaggedPage" time="11.215">
+  <testcase classname="com.thinkanalytically.tagalyzer.test.TagFilteringWebProxyTest" name="chromeTestUntaggedSecurePage" time="3.903"/>
+  <testcase classname="com.thinkanalytically.tagalyzer.test.TagFilteringWebProxyTest" name="chromeTestTaggedSecurePage" time="9.151">
     <failure type="java.lang.AssertionError">java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:86)
 	at org.junit.Assert.assertTrue(Assert.java:41)
 	at org.junit.Assert.assertTrue(Assert.java:52)
-	at com.thinkanalytically.tagalyzer.test.TagFilteringWebProxyTest.testSecureTaggedPage(TagFilteringWebProxyTest.java:92)
+	at com.thinkanalytically.tagalyzer.test.TagFilteringWebProxyTest.chromeTestTaggedSecurePage(TagFilteringWebProxyTest.java:92)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -101,99 +102,198 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-out>0      2015-05-20 12:07:57,761 INFO  [main] extras.SelfSignedSslEngineSource (?:?).?() - Not deleting keystore
-378    2015-05-20 12:07:58,139 INFO  [main] impl.DefaultHttpProxyServer (?:?).?() - Starting proxy at address: /127.0.0.1:8089
-379    2015-05-20 12:07:58,140 INFO  [main] impl.DefaultHttpProxyServer (?:?).?() - Proxy listening with TCP transport
-3967   2015-05-20 12:08:01,728 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.comsecurestore.hbo.com:443
-4829   2015-05-20 12:08:02,590 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/
-5089   2015-05-20 12:08:02,850 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/default/layout/style.css?ver=106
-5092   2015-05-20 12:08:02,853 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.comsecurestore.hbo.com:443
-5096   2015-05-20 12:08:02,857 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.comsecurestore.hbo.com:443
-5114   2015-05-20 12:08:02,875 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.comsecurestore.hbo.com:443
-5115   2015-05-20 12:08:02,876 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: t.p.mybuys.comt.p.mybuys.com:443
-5118   2015-05-20 12:08:02,879 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: assets.adobedtm.comassets.adobedtm.com:443
-5125   2015-05-20 12:08:02,886 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: t.p.mybuys.comt.p.mybuys.com:443
-5126   2015-05-20 12:08:02,887 ERROR [LittleProxy-ClientToProxyWorker-6] impl.LittleProxy (?:?).?() - Full URI requested is: assets.resultspage.comassets.resultspage.com:443
-5128   2015-05-20 12:08:02,889 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/default/fonts/ProximaNovaLight/stylesheet.css?ver=106
-5128   2015-05-20 12:08:02,889 ERROR [LittleProxy-ClientToProxyWorker-7] impl.LittleProxy (?:?).?() - Full URI requested is: hbo.resultspage.comhbo.resultspage.com:443
-5129   2015-05-20 12:08:02,890 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: connect.facebook.netconnect.facebook.net:443
-5134   2015-05-20 12:08:02,895 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.comsecurestore.hbo.com:443
-5134   2015-05-20 12:08:02,895 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.comsecurestore.hbo.com:443
-5137   2015-05-20 12:08:02,898 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: platform.twitter.complatform.twitter.com:443
-5139   2015-05-20 12:08:02,900 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: t.p.mybuys.comt.p.mybuys.com:443
-5167   2015-05-20 12:08:02,928 ERROR [LittleProxy-ClientToProxyWorker-6] impl.LittleProxy (?:?).?() - Full URI requested is: ajax.googleapis.comajax.googleapis.com:443
-5168   2015-05-20 12:08:02,929 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: hbo.resultspage.comhbo.resultspage.com:443
-5239   2015-05-20 12:08:03,000 ERROR [LittleProxy-ClientToProxyWorker-7] impl.LittleProxy (?:?).?() - Full URI requested is: ajax.googleapis.comajax.googleapis.com:443
-5253   2015-05-20 12:08:03,014 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/header2.css?ver=106
-5339   2015-05-20 12:08:03,100 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/style2.css?ver=106
-5832   2015-05-20 12:08:03,593 ERROR [LittleProxy-ClientToProxyWorker-6] impl.LittleProxy (?:?).?() - Full URI requested is: assets.resultspage.com/js/rac/sli-rac.1.6.css
-6297   2015-05-20 12:08:04,058 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/default/fonts/GothamRegular/stylesheet.css
-6384   2015-05-20 12:08:04,145 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/detail2.css?ver=106
-6397   2015-05-20 12:08:04,158 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: t.p.mybuys.com/clients/HBO/css/styles.css
-6450   2015-05-20 12:08:04,211 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/behavior/main.js
-6466   2015-05-20 12:08:04,227 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: t.p.mybuys.com/js/mybuys3.js
-6475   2015-05-20 12:08:04,236 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/default/behavior/yesmail.js
-6526   2015-05-20 12:08:04,287 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: t.p.mybuys.com/clients/HBO/js/setup.js
-6527   2015-05-20 12:08:04,288 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/js/ajax_tools.js
-6562   2015-05-20 12:08:04,323 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/js/swfobject.js
-6586   2015-05-20 12:08:04,347 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/js/formvalidate.js
-6646   2015-05-20 12:08:04,407 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/behavior/AC_RunActiveContent.js
-6670   2015-05-20 12:08:04,431 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/behavior/ajaxConfig1.js?ver=106
-6687   2015-05-20 12:08:04,448 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/generic/js/mootools-core-1.3.2-full-compat-yc.js
-6831   2015-05-20 12:08:04,592 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/generic/js/mootools-more-1.3.2-full-compat-yc.js
-6914   2015-05-20 12:08:04,675 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/slimbox.css?ver=106
-6926   2015-05-20 12:08:04,687 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/js/ajax/ajaxDetail-1.2.js?ver=106
-6960   2015-05-20 12:08:04,721 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/js/ajax/ajaxOverlay-1.2.js?ver=106
-6987   2015-05-20 12:08:04,748 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/js/ajax/ajaxPopup-1.2.js?ver=106
-6999   2015-05-20 12:08:04,760 ERROR [LittleProxy-ClientToProxyWorker-6] impl.LittleProxy (?:?).?() - Full URI requested is: ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js
-7009   2015-05-20 12:08:04,770 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/behavior/detail_options1.js?ver=106
-7017   2015-05-20 12:08:04,778 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/default/behavior/VisitorAPI.js
-7067   2015-05-20 12:08:04,828 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/default/behavior/AppMeasurement.js
-7076   2015-05-20 12:08:04,837 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/default/behavior/s_code_supplement1.js
-7082   2015-05-20 12:08:04,843 ERROR [LittleProxy-ClientToProxyWorker-6] impl.LittleProxy (?:?).?() - Full URI requested is: ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js
-7142   2015-05-20 12:08:04,903 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/home.css?ver=106
-7154   2015-05-20 12:08:04,915 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/btn_cart.png
-7161   2015-05-20 12:08:04,922 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: assets.adobedtm.com/acf4fc818357d9e20cf038350a69714b00ae2a44/satelliteLib-647dcde0cc6546cae19cd45cfe2c3a6810e575e1.js
-7180   2015-05-20 12:08:04,941 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/btn_checkout.gif
-7188   2015-05-20 12:08:04,949 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: secure.comodo.netsecure.comodo.net:443
-7357   2015-05-20 12:08:05,118 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: connect.facebook.net/en_US/all.js
-7368   2015-05-20 12:08:05,129 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: hbo.resultspage.com/rac/sli-rac.css
-7415   2015-05-20 12:08:05,176 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: hbo.resultspage.com/rac/sli-rac.config.js
-9845   2015-05-20 12:08:07,606 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: platform.twitter.com/widgets.js
-11282  2015-05-20 12:08:09,043 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/btn_search.gif
-11305  2015-05-20 12:08:09,066 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/img_topnav-arrow.png
-11323  2015-05-20 12:08:09,084 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/img/view/view1/000/103/974/entourage-new-arrivals.png
-11390  2015-05-20 12:08:09,151 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/img/view/view1/000/096/540/got-replicas-169.png
-11423  2015-05-20 12:08:09,184 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/imgcache/product/resized/000/465/000/catl/game-of-thrones-dragon-eggs-collectible-set-769_152.jpg?k=03bb604e&amp;pid=465000&amp;s=catl&amp;sn=hbo
-11442  2015-05-20 12:08:09,203 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/btn_addToCart.png
-11458  2015-05-20 12:08:09,219 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/imgcache/product/resized/000/499/513/catl/game-of-thrones-12-targaryen-pendant_152.jpg?k=2dcb366e&amp;pid=499513&amp;s=catl&amp;sn=hbo
-11477  2015-05-20 12:08:09,238 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/imgcache/product/resized/000/368/178/catl/00368178-795242_152.jpg?k=1e70397b&amp;pid=368178&amp;s=catl&amp;sn=hbo
-11500  2015-05-20 12:08:09,261 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/imgcache/product/resized/000/376/119/catl/00376119-950897_152.jpg?k=2a7661de&amp;pid=376119&amp;s=catl&amp;sn=hbo
-11521  2015-05-20 12:08:09,282 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/imgcache/product/resized/000/848/120/catl/game-of-thrones-khal-drogos-arakh-148_152.jpg?k=039bc0a2&amp;pid=848120&amp;s=catl&amp;sn=hbo
-11541  2015-05-20 12:08:09,302 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/imgcache/product/resized/000/846/112/catl/silicon-valley-bro-2-bro-t-shirt-859_152.jpg?k=f5576bec&amp;pid=846112&amp;s=catl&amp;sn=hbo
-11568  2015-05-20 12:08:09,329 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/btn_viewDetails.png
-11583  2015-05-20 12:08:09,344 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/imgcache/product/resized/000/821/280/catl/entourage-the-complete-series-movie-money-dvd-172_152.jpg?k=7b8e4a72&amp;pid=821280&amp;s=catl&amp;sn=hbo
-11604  2015-05-20 12:08:09,365 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/imgcache/product/resized/000/830/943/catl/last-week-tonight-with-john-oliver-how-is-this-still-a-thing-t-shirt_152.jpg?k=58ef7d56&amp;pid=830943&amp;s=catl&amp;sn=hbo
-12047  2015-05-20 12:08:09,808 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: secure.comodo.net/trustlogo/javascript/trustlogo.js
-12426  2015-05-20 12:08:10,187 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: shopsocially.comshopsocially.com:443
-12966  2015-05-20 12:08:10,727 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: shopsocially.com/js/all.js
-13320  2015-05-20 12:08:11,081 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: api.mixpanel.comapi.mixpanel.com:443
-13323  2015-05-20 12:08:11,084 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: d2aly8ugr9c5td.cloudfront.netd2aly8ugr9c5td.cloudfront.net:443
-13335  2015-05-20 12:08:11,096 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: shopsocially.com/js/merchant_conf?pid=10010&amp;page_url=https%3A%2F%2Fsecurestore.hbo.com%2F&amp;page_title=Official%20HBO%20Store%20%7C%20Shop%20from%20your%20favorite%20HBO%20series&amp;browsed_pages=1&amp;r=1432145291092
-13421  2015-05-20 12:08:11,182 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: assets.adobedtm.com/acf4fc818357d9e20cf038350a69714b00ae2a44/mbox-contents-0ca515bcb88ce6dc619fab369834eda1c61a64e5.js
-13440  2015-05-20 12:08:11,201 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/hbo_body_bg.jpg
-13448  2015-05-20 12:08:11,209 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: s-static.ak.facebook.coms-static.ak.facebook.com:443
-13504  2015-05-20 12:08:11,265 ERROR [LittleProxy-ClientToProxyWorker-6] impl.LittleProxy (?:?).?() - Full URI requested is: cdn.tt.omtrdc.netcdn.tt.omtrdc.net:443
-13508  2015-05-20 12:08:11,269 ERROR [LittleProxy-ClientToProxyWorker-7] impl.LittleProxy (?:?).?() - Full URI requested is: deliveryagent.tt.omtrdc.netdeliveryagent.tt.omtrdc.net:443
-13897  2015-05-20 12:08:11,658 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: d2aly8ugr9c5td.cloudfront.net/static/easyXDM.min.js
-13974  2015-05-20 12:08:11,735 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: api.mixpanel.com/site_media/js/api/mixpanel.js
-14007  2015-05-20 12:08:11,768 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: s-static.ak.facebook.com/connect/xd_arbiter/NM7BtzAR8RM.js?version=41
-14052  2015-05-20 12:08:11,813 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: api.mixpanel.com/track/?data=eyJldmVudCI6ICJtcF9wYWdlX3ZpZXciLCJwcm9wZXJ0aWVzIjogeyIkb3MiOiAiV2luZG93cyIsIiRicm93c2VyIjogIkNocm9tZSIsIiRpbml0aWFsX3JlZmVycmVyIjogIiIsIiRpbml0aWFsX3JlZmVycmluZ19kb21haW4iOiAiIiwibXBfYnJvd3NlciI6ICJDaHJvbWUiLCJtcF9wbGF0Zm9ybSI6ICJXaW5kb3dzIiwibXBfcGFnZSI6ICJodHRwczovL3NlY3VyZXN0b3JlLmhiby5jb20vIiwidG9rZW4iOiAiOWZjNmNjMWViMmFhYzJkMzhlNGUxNzVkNGJhZDk5OWMiLCJ0aW1lIjogMTQzMjE0NTI5MX19&amp;ip=1&amp;callback=mpq.metrics.jsonp_callback&amp;_=1432145291810
+    <system-out>7674   2015-05-20 13:02:19,099 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.comsecurestore.hbo.com:443
+8265   2015-05-20 13:02:19,690 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/
+8523   2015-05-20 13:02:19,948 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/default/layout/style.css?ver=106
+8559   2015-05-20 13:02:19,984 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.comsecurestore.hbo.com:443
+8559   2015-05-20 13:02:19,984 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.comsecurestore.hbo.com:443
+8559   2015-05-20 13:02:19,984 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.comsecurestore.hbo.com:443
+8559   2015-05-20 13:02:19,984 ERROR [LittleProxy-ClientToProxyWorker-6] impl.LittleProxy (?:?).?() - Full URI requested is: assets.resultspage.comassets.resultspage.com:443
+8560   2015-05-20 13:02:19,985 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: connect.facebook.netconnect.facebook.net:443
+8561   2015-05-20 13:02:19,986 ERROR [LittleProxy-ClientToProxyWorker-7] impl.LittleProxy (?:?).?() - Full URI requested is: hbo.resultspage.comhbo.resultspage.com:443
+8562   2015-05-20 13:02:19,987 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.comsecurestore.hbo.com:443
+8562   2015-05-20 13:02:19,987 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.comsecurestore.hbo.com:443
+8566   2015-05-20 13:02:19,991 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: assets.adobedtm.comassets.adobedtm.com:443
+8568   2015-05-20 13:02:19,993 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: t.p.mybuys.comt.p.mybuys.com:443
+8568   2015-05-20 13:02:19,993 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: t.p.mybuys.comt.p.mybuys.com:443
+8571   2015-05-20 13:02:19,996 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: t.p.mybuys.comt.p.mybuys.com:443
+8573   2015-05-20 13:02:19,998 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: platform.twitter.complatform.twitter.com:443
+8590   2015-05-20 13:02:20,015 ERROR [LittleProxy-ClientToProxyWorker-6] impl.LittleProxy (?:?).?() - Full URI requested is: ajax.googleapis.comajax.googleapis.com:443
+8596   2015-05-20 13:02:20,021 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/default/fonts/ProximaNovaLight/stylesheet.css?ver=106
+8597   2015-05-20 13:02:20,022 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: hbo.resultspage.comhbo.resultspage.com:443
+8686   2015-05-20 13:02:20,111 ERROR [LittleProxy-ClientToProxyWorker-7] impl.LittleProxy (?:?).?() - Full URI requested is: ajax.googleapis.comajax.googleapis.com:443
+8715   2015-05-20 13:02:20,140 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/header2.css?ver=106
+9315   2015-05-20 13:02:20,740 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/detail2.css?ver=106
+9734   2015-05-20 13:02:21,159 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/style2.css?ver=106
+9749   2015-05-20 13:02:21,174 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: assets.adobedtm.com/acf4fc818357d9e20cf038350a69714b00ae2a44/satelliteLib-647dcde0cc6546cae19cd45cfe2c3a6810e575e1.js
+9776   2015-05-20 13:02:21,201 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/home.css?ver=106
+9796   2015-05-20 13:02:21,221 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/default/fonts/GothamRegular/stylesheet.css
+9812   2015-05-20 13:02:21,237 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/behavior/main.js
+9836   2015-05-20 13:02:21,261 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/default/behavior/yesmail.js
+9891   2015-05-20 13:02:21,316 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/js/ajax_tools.js
+9897   2015-05-20 13:02:21,322 ERROR [LittleProxy-ClientToProxyWorker-6] impl.LittleProxy (?:?).?() - Full URI requested is: assets.resultspage.com/js/rac/sli-rac.1.6.css
+9912   2015-05-20 13:02:21,337 ERROR [LittleProxy-ClientToProxyWorker-6] impl.LittleProxy (?:?).?() - Full URI requested is: ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js
+9978   2015-05-20 13:02:21,403 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/js/swfobject.js
+9994   2015-05-20 13:02:21,419 ERROR [LittleProxy-ClientToProxyWorker-6] impl.LittleProxy (?:?).?() - Full URI requested is: ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js
+10037  2015-05-20 13:02:21,462 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/js/formvalidate.js
+10102  2015-05-20 13:02:21,527 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: connect.facebook.net/en_US/all.js
+10104  2015-05-20 13:02:21,529 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/behavior/AC_RunActiveContent.js
+10113  2015-05-20 13:02:21,538 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: hbo.resultspage.com/rac/sli-rac.css
+10160  2015-05-20 13:02:21,585 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: hbo.resultspage.com/rac/sli-rac.config.js
+10166  2015-05-20 13:02:21,591 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/slimbox.css?ver=106
+10188  2015-05-20 13:02:21,613 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/behavior/ajaxConfig1.js?ver=106
+10192  2015-05-20 13:02:21,617 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/generic/js/mootools-core-1.3.2-full-compat-yc.js
+10195  2015-05-20 13:02:21,620 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: platform.twitter.com/widgets.js
+10197  2015-05-20 13:02:21,622 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/generic/js/mootools-more-1.3.2-full-compat-yc.js
+10218  2015-05-20 13:02:21,643 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/js/ajax/ajaxDetail-1.2.js?ver=106
+10257  2015-05-20 13:02:21,682 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/js/ajax/ajaxOverlay-1.2.js?ver=106
+10318  2015-05-20 13:02:21,743 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/js/ajax/ajaxPopup-1.2.js?ver=106
+10349  2015-05-20 13:02:21,774 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/behavior/detail_options1.js?ver=106
+10376  2015-05-20 13:02:21,801 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/default/behavior/VisitorAPI.js
+10383  2015-05-20 13:02:21,808 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/default/behavior/AppMeasurement.js
+10421  2015-05-20 13:02:21,846 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/default/behavior/s_code_supplement1.js
+10459  2015-05-20 13:02:21,884 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/btn_cart.png
+10480  2015-05-20 13:02:21,905 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/btn_checkout.gif
+10501  2015-05-20 13:02:21,926 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/btn_search.gif
+10528  2015-05-20 13:02:21,953 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/img_topnav-arrow.png
+10545  2015-05-20 13:02:21,970 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/img/view/view1/000/103/974/entourage-new-arrivals.png
+10586  2015-05-20 13:02:22,011 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/img/view/view1/000/096/540/got-replicas-169.png
+10631  2015-05-20 13:02:22,056 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/imgcache/product/resized/000/465/000/catl/game-of-thrones-dragon-eggs-collectible-set-769_152.jpg?k=03bb604e&amp;pid=465000&amp;s=catl&amp;sn=hbo
+10653  2015-05-20 13:02:22,078 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/btn_addToCart.png
+10679  2015-05-20 13:02:22,104 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/imgcache/product/resized/000/499/513/catl/game-of-thrones-12-targaryen-pendant_152.jpg?k=2dcb366e&amp;pid=499513&amp;s=catl&amp;sn=hbo
+10701  2015-05-20 13:02:22,126 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/imgcache/product/resized/000/368/178/catl/00368178-795242_152.jpg?k=1e70397b&amp;pid=368178&amp;s=catl&amp;sn=hbo
+10732  2015-05-20 13:02:22,157 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/imgcache/product/resized/000/376/119/catl/00376119-950897_152.jpg?k=2a7661de&amp;pid=376119&amp;s=catl&amp;sn=hbo
+10754  2015-05-20 13:02:22,179 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/imgcache/product/resized/000/848/120/catl/game-of-thrones-khal-drogos-arakh-148_152.jpg?k=039bc0a2&amp;pid=848120&amp;s=catl&amp;sn=hbo
+10773  2015-05-20 13:02:22,198 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/imgcache/product/resized/000/846/112/catl/silicon-valley-bro-2-bro-t-shirt-859_152.jpg?k=f5576bec&amp;pid=846112&amp;s=catl&amp;sn=hbo
+10794  2015-05-20 13:02:22,219 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/btn_viewDetails.png
+10828  2015-05-20 13:02:22,253 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/imgcache/product/resized/000/821/280/catl/entourage-the-complete-series-movie-money-dvd-172_152.jpg?k=7b8e4a72&amp;pid=821280&amp;s=catl&amp;sn=hbo
+10851  2015-05-20 13:02:22,276 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/imgcache/product/resized/000/830/943/catl/last-week-tonight-with-john-oliver-how-is-this-still-a-thing-t-shirt_152.jpg?k=58ef7d56&amp;pid=830943&amp;s=catl&amp;sn=hbo
+13050  2015-05-20 13:02:24,475 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: secure.comodo.netsecure.comodo.net:443
+13385  2015-05-20 13:02:24,810 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: t.p.mybuys.com/clients/HBO/css/styles.css
+13401  2015-05-20 13:02:24,826 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: t.p.mybuys.com/js/mybuys3.js
+13427  2015-05-20 13:02:24,852 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: t.p.mybuys.com/clients/HBO/js/setup.js
+13932  2015-05-20 13:02:25,357 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: secure.comodo.net/trustlogo/javascript/trustlogo.js
+14308  2015-05-20 13:02:25,733 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: shopsocially.comshopsocially.com:443
+14777  2015-05-20 13:02:26,202 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: shopsocially.com/js/all.js
+15140  2015-05-20 13:02:26,565 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: api.mixpanel.comapi.mixpanel.com:443
+15144  2015-05-20 13:02:26,569 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: d2aly8ugr9c5td.cloudfront.netd2aly8ugr9c5td.cloudfront.net:443
+15163  2015-05-20 13:02:26,588 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: shopsocially.com/js/merchant_conf?pid=10010&amp;page_url=https%3A%2F%2Fsecurestore.hbo.com%2F&amp;page_title=Official%20HBO%20Store%20%7C%20Shop%20from%20your%20favorite%20HBO%20series&amp;browsed_pages=1&amp;r=1432148546584
+15245  2015-05-20 13:02:26,670 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: assets.adobedtm.com/acf4fc818357d9e20cf038350a69714b00ae2a44/mbox-contents-0ca515bcb88ce6dc619fab369834eda1c61a64e5.js
+15264  2015-05-20 13:02:26,689 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: securestore.hbo.com/hbo/layout/hbo_body_bg.jpg
+15271  2015-05-20 13:02:26,696 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: s-static.ak.facebook.coms-static.ak.facebook.com:443
+15317  2015-05-20 13:02:26,742 ERROR [LittleProxy-ClientToProxyWorker-6] impl.LittleProxy (?:?).?() - Full URI requested is: cdn.tt.omtrdc.netcdn.tt.omtrdc.net:443
+15321  2015-05-20 13:02:26,746 ERROR [LittleProxy-ClientToProxyWorker-7] impl.LittleProxy (?:?).?() - Full URI requested is: deliveryagent.tt.omtrdc.netdeliveryagent.tt.omtrdc.net:443
+15829  2015-05-20 13:02:27,254 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: s-static.ak.facebook.com/connect/xd_arbiter/NM7BtzAR8RM.js?version=41
+15839  2015-05-20 13:02:27,264 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: api.mixpanel.com/site_media/js/api/mixpanel.js
+15840  2015-05-20 13:02:27,265 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: d2aly8ugr9c5td.cloudfront.net/static/easyXDM.min.js
+15928  2015-05-20 13:02:27,353 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: api.mixpanel.com/track/?data=eyJldmVudCI6ICJtcF9wYWdlX3ZpZXciLCJwcm9wZXJ0aWVzIjogeyIkb3MiOiAiV2luZG93cyIsIiRicm93c2VyIjogIkNocm9tZSIsIiRpbml0aWFsX3JlZmVycmVyIjogIiIsIiRpbml0aWFsX3JlZmVycmluZ19kb21haW4iOiAiIiwibXBfYnJvd3NlciI6ICJDaHJvbWUiLCJtcF9wbGF0Zm9ybSI6ICJXaW5kb3dzIiwibXBfcGFnZSI6ICJodHRwczovL3NlY3VyZXN0b3JlLmhiby5jb20vIiwidG9rZW4iOiAiOWZjNmNjMWViMmFhYzJkMzhlNGUxNzVkNGJhZDk5OWMiLCJ0aW1lIjogMTQzMjE0ODU0N319&amp;ip=1&amp;callback=mpq.metrics.jsonp_callback&amp;_=1432148547347
+15969  2015-05-20 13:02:27,394 ERROR [LittleProxy-ClientToProxyWorker-7] impl.LittleProxy (?:?).?() - Full URI requested is: deliveryagent.tt.omtrdc.net/m2/deliveryagent/mbox/standard?mboxHost=securestore.hbo.com&amp;mboxPage=1432148546734-217493&amp;screenHeight=768&amp;screenWidth=1366&amp;browserWidth=1034&amp;browserHeight=619&amp;browserTimeOffset=-360&amp;colorDepth=24&amp;mboxSession=1432148546734-217493&amp;mboxCount=1&amp;mboxTime=1432126946741&amp;mbox=target-global-mbox&amp;mboxId=0&amp;mboxURL=https%3A%2F%2Fsecurestore.hbo.com%2F&amp;mboxReferrer=&amp;mboxVersion=56
 </system-out>
-    <system-err>Starting ChromeDriver 2.15.322448 (52179c1b310fec1797c81ea9a20326839860b7d3) on port 38126
-Only local connections are allowed.
-</system-err>
   </testcase>
-  <testcase classname="com.thinkanalytically.tagalyzer.test.TagFilteringWebProxyTest" name="testInsecureTaggedPage" time="7.463"/>
-  <testcase classname="com.thinkanalytically.tagalyzer.test.TagFilteringWebProxyTest" name="testUntaggedPage" time="2.812"/>
+  <testcase classname="com.thinkanalytically.tagalyzer.test.TagFilteringWebProxyTest" name="chromeTestTaggedInsecurePage" time="4.502">
+    <failure type="java.lang.AssertionError">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at com.thinkanalytically.tagalyzer.test.TagFilteringWebProxyTest.chromeTestTaggedInsecurePage(TagFilteringWebProxyTest.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>16743  2015-05-20 13:02:28,168 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/
+17089  2015-05-20 13:02:28,514 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/default/layout/style.css?ver=106
+17100  2015-05-20 13:02:28,525 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/default/fonts/ProximaNovaLight/stylesheet.css?ver=106
+17101  2015-05-20 13:02:28,526 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/hbo/layout/header2.css?ver=106
+17103  2015-05-20 13:02:28,528 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/hbo/layout/style2.css?ver=106
+17103  2015-05-20 13:02:28,528 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/hbo/layout/detail2.css?ver=106
+17103  2015-05-20 13:02:28,528 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: connect.facebook.nethttp://connect.facebook.net/en_US/all.js
+17107  2015-05-20 13:02:28,532 ERROR [LittleProxy-ClientToProxyWorker-7] impl.LittleProxy (?:?).?() - Full URI requested is: hbo.resultspage.comhttp://hbo.resultspage.com/rac/sli-rac.css
+17109  2015-05-20 13:02:28,534 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/hbo/layout/slimbox.css?ver=106
+17119  2015-05-20 13:02:28,544 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: assets.adobedtm.comhttp://assets.adobedtm.com/acf4fc818357d9e20cf038350a69714b00ae2a44/satelliteLib-647dcde0cc6546cae19cd45cfe2c3a6810e575e1.js
+17121  2015-05-20 13:02:28,546 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: t.p.mybuys.comhttp://t.p.mybuys.com/clients/HBO/css/styles.css
+17124  2015-05-20 13:02:28,549 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: t.p.mybuys.comhttp://t.p.mybuys.com/js/mybuys3.js
+17124  2015-05-20 13:02:28,549 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: ajax.googleapis.comhttp://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js
+17128  2015-05-20 13:02:28,553 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: t.p.mybuys.comhttp://t.p.mybuys.com/clients/HBO/js/setup.js
+17151  2015-05-20 13:02:28,576 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: platform.twitter.comhttp://platform.twitter.com/widgets.js
+17166  2015-05-20 13:02:28,591 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/hbo/layout/home.css?ver=106
+17176  2015-05-20 13:02:28,601 ERROR [LittleProxy-ClientToProxyWorker-7] impl.LittleProxy (?:?).?() - Full URI requested is: hbo.resultspage.comhttp://hbo.resultspage.com/rac/sli-rac.config.js
+17199  2015-05-20 13:02:28,624 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/hbo/behavior/main.js
+17207  2015-05-20 13:02:28,632 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/default/behavior/yesmail.js
+17221  2015-05-20 13:02:28,646 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/default/fonts/GothamRegular/stylesheet.css
+17221  2015-05-20 13:02:28,646 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/js/ajax_tools.js
+17222  2015-05-20 13:02:28,647 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/js/swfobject.js
+17225  2015-05-20 13:02:28,650 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/js/formvalidate.js
+17259  2015-05-20 13:02:28,684 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/hbo/behavior/AC_RunActiveContent.js
+17268  2015-05-20 13:02:28,693 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/generic/js/mootools-core-1.3.2-full-compat-yc.js
+17269  2015-05-20 13:02:28,694 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/hbo/behavior/ajaxConfig1.js?ver=106
+17269  2015-05-20 13:02:28,694 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/generic/js/mootools-more-1.3.2-full-compat-yc.js
+17269  2015-05-20 13:02:28,694 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/js/ajax/ajaxDetail-1.2.js?ver=106
+17275  2015-05-20 13:02:28,700 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/js/ajax/ajaxOverlay-1.2.js?ver=106
+17289  2015-05-20 13:02:28,714 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/js/ajax/ajaxPopup-1.2.js?ver=106
+17297  2015-05-20 13:02:28,722 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/hbo/behavior/detail_options1.js?ver=106
+17307  2015-05-20 13:02:28,732 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/default/behavior/VisitorAPI.js
+17307  2015-05-20 13:02:28,732 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/default/behavior/AppMeasurement.js
+17319  2015-05-20 13:02:28,744 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/default/behavior/s_code_supplement1.js
+17330  2015-05-20 13:02:28,755 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/hbo/layout/btn_cart.png
+17357  2015-05-20 13:02:28,782 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/hbo/layout/btn_checkout.gif
+17395  2015-05-20 13:02:28,820 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/hbo/layout/btn_search.gif
+17419  2015-05-20 13:02:28,844 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/hbo/layout/img_topnav-arrow.png
+17433  2015-05-20 13:02:28,858 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/img/view/view1/000/103/974/entourage-new-arrivals.png
+17452  2015-05-20 13:02:28,877 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/img/view/view1/000/096/540/got-replicas-169.png
+17474  2015-05-20 13:02:28,899 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/imgcache/product/resized/000/465/000/catl/game-of-thrones-dragon-eggs-collectible-set-769_152.jpg?k=03bb604e&amp;pid=465000&amp;s=catl&amp;sn=hbo
+17498  2015-05-20 13:02:28,923 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/hbo/layout/btn_addToCart.png
+17514  2015-05-20 13:02:28,939 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/imgcache/product/resized/000/499/513/catl/game-of-thrones-12-targaryen-pendant_152.jpg?k=2dcb366e&amp;pid=499513&amp;s=catl&amp;sn=hbo
+17531  2015-05-20 13:02:28,956 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/imgcache/product/resized/000/368/178/catl/00368178-795242_152.jpg?k=1e70397b&amp;pid=368178&amp;s=catl&amp;sn=hbo
+17550  2015-05-20 13:02:28,975 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/imgcache/product/resized/000/376/119/catl/00376119-950897_152.jpg?k=2a7661de&amp;pid=376119&amp;s=catl&amp;sn=hbo
+17578  2015-05-20 13:02:29,003 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/imgcache/product/resized/000/848/120/catl/game-of-thrones-khal-drogos-arakh-148_152.jpg?k=039bc0a2&amp;pid=848120&amp;s=catl&amp;sn=hbo
+17597  2015-05-20 13:02:29,022 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/imgcache/product/resized/000/846/112/catl/silicon-valley-bro-2-bro-t-shirt-859_152.jpg?k=f5576bec&amp;pid=846112&amp;s=catl&amp;sn=hbo
+17615  2015-05-20 13:02:29,040 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/hbo/layout/btn_viewDetails.png
+17638  2015-05-20 13:02:29,063 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/imgcache/product/resized/000/821/280/catl/entourage-the-complete-series-movie-money-dvd-172_152.jpg?k=7b8e4a72&amp;pid=821280&amp;s=catl&amp;sn=hbo
+17660  2015-05-20 13:02:29,085 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/imgcache/product/resized/000/830/943/catl/last-week-tonight-with-john-oliver-how-is-this-still-a-thing-t-shirt_152.jpg?k=58ef7d56&amp;pid=830943&amp;s=catl&amp;sn=hbo
+19399  2015-05-20 13:02:30,824 ERROR [LittleProxy-ClientToProxyWorker-6] impl.LittleProxy (?:?).?() - Full URI requested is: assets.resultspage.comhttp://assets.resultspage.com/js/rac/sli-rac.1.6.css
+19451  2015-05-20 13:02:30,876 ERROR [LittleProxy-ClientToProxyWorker-6] impl.LittleProxy (?:?).?() - Full URI requested is: ajax.googleapis.comhttp://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js
+19517  2015-05-20 13:02:30,942 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: shopsocially.comhttp://shopsocially.com/js/all.js
+19793  2015-05-20 13:02:31,218 ERROR [LittleProxy-ClientToProxyWorker-2] impl.LittleProxy (?:?).?() - Full URI requested is: api.mixpanel.comhttp://api.mixpanel.com/site_media/js/api/mixpanel.js
+19795  2015-05-20 13:02:31,220 ERROR [LittleProxy-ClientToProxyWorker-3] impl.LittleProxy (?:?).?() - Full URI requested is: d2aly8ugr9c5td.cloudfront.nethttp://d2aly8ugr9c5td.cloudfront.net/static/easyXDM.min.js
+19819  2015-05-20 13:02:31,244 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: shopsocially.comhttp://shopsocially.com/js/merchant_conf?pid=10010&amp;page_url=http%3A%2F%2Fstore.hbo.com%2F&amp;page_title=Official%20HBO%20Store%20%7C%20Shop%20from%20your%20favorite%20HBO%20series&amp;browsed_pages=1&amp;r=1432148551235
+19930  2015-05-20 13:02:31,355 ERROR [LittleProxy-ClientToProxyWorker-4] impl.LittleProxy (?:?).?() - Full URI requested is: assets.adobedtm.comhttp://assets.adobedtm.com/acf4fc818357d9e20cf038350a69714b00ae2a44/mbox-contents-0ca515bcb88ce6dc619fab369834eda1c61a64e5.js
+19945  2015-05-20 13:02:31,370 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: store.hbo.comhttp://store.hbo.com/hbo/layout/hbo_body_bg.jpg
+19953  2015-05-20 13:02:31,378 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: s-static.ak.facebook.com/connect/xd_arbiter/NM7BtzAR8RM.js?version=41
+19953  2015-05-20 13:02:31,378 ERROR [LittleProxy-ClientToProxyWorker-5] impl.LittleProxy (?:?).?() - Full URI requested is: static.ak.facebook.comhttp://static.ak.facebook.com/connect/xd_arbiter/NM7BtzAR8RM.js?version=41
+19974  2015-05-20 13:02:31,399 ERROR [LittleProxy-ClientToProxyWorker-6] impl.LittleProxy (?:?).?() - Full URI requested is: api.mixpanel.comhttp://api.mixpanel.com/track/?data=eyJldmVudCI6ICJtcF9wYWdlX3ZpZXciLCJwcm9wZXJ0aWVzIjogeyIkb3MiOiAiV2luZG93cyIsIiRicm93c2VyIjogIkNocm9tZSIsIiRpbml0aWFsX3JlZmVycmVyIjogIiIsIiRpbml0aWFsX3JlZmVycmluZ19kb21haW4iOiAiIiwibXBfYnJvd3NlciI6ICJDaHJvbWUiLCJtcF9wbGF0Zm9ybSI6ICJXaW5kb3dzIiwibXBfcGFnZSI6ICJodHRwOi8vc3RvcmUuaGJvLmNvbS8iLCJ0b2tlbiI6ICI5ZmM2Y2MxZWIyYWFjMmQzOGU0ZTE3NWQ0YmFkOTk5YyIsInRpbWUiOiAxNDMyMTQ4NTUxfX0%3D&amp;ip=1&amp;callback=mpq.metrics.jsonp_callback&amp;_=1432148551395
+20098  2015-05-20 13:02:31,523 ERROR [LittleProxy-ClientToProxyWorker-7] impl.LittleProxy (?:?).?() - Full URI requested is: cdn.tt.omtrdc.nethttp://cdn.tt.omtrdc.net/cdn/target.js
+20104  2015-05-20 13:02:31,529 ERROR [LittleProxy-ClientToProxyWorker-1] impl.LittleProxy (?:?).?() - Full URI requested is: static.scriptsession.comhttp://static.scriptsession.com/lt/08273a
+20104  2015-05-20 13:02:31,529 ERROR [LittleProxy-ClientToProxyWorker-0] impl.LittleProxy (?:?).?() - Full URI requested is: deliveryagent.tt.omtrdc.nethttp://deliveryagent.tt.omtrdc.net/m2/deliveryagent/mbox/standard?mboxHost=store.hbo.com&amp;mboxPage=1432148551513-833755&amp;screenHeight=768&amp;screenWidth=1366&amp;browserWidth=1034&amp;browserHeight=619&amp;browserTimeOffset=-360&amp;colorDepth=24&amp;mboxSession=1432148546734-217493&amp;mboxCount=1&amp;mboxTime=1432126951519&amp;mbox=target-global-mbox&amp;mboxId=0&amp;mboxURL=http%3A%2F%2Fstore.hbo.com%2F&amp;mboxReferrer=&amp;mboxVersion=56
+</system-out>
+  </testcase>
 </testsuite>

@@ -85,12 +85,59 @@ public class SeleniumChromeBrowser implements ScriptableBrowser {
 				_driverJs.executeScript(script.getText());
 			}
 			catch(Exception ex) {
-				_logger.warn("Error executing javascript!", ex);
+				_logger.debug("Error executing javascript!" + ex.getMessage());
 			}
 		}
 		responsePage.set_pageTitle(_driver.getTitle());
 		responsePage.set_pageContent(_driver.getPageSource());
 		responsePage.set_pageURL(_driver.getCurrentUrl());
+		
+		String pageSource = _driver.getPageSource();
+		List<WebElement> bodyTags = _driver.findElements(By.tagName("body"));
+		responsePage.set_hasBodyTag(bodyTags.size()>0);
+		responsePage.set_hasSmartyCompileText(pageSource != null && pageSource.toUpperCase().contains("SMARTY") && pageSource.toUpperCase().contains("COMPILE") );
+		responsePage.set_hasDigitalDataJson(pageSource != null && pageSource.toUpperCase().contains("VAR DIGITALDATA=") );
+		responsePage.set_hasCorrectSatelliteLib(pageSource != null && pageSource.toUpperCase().contains("assets.adobedtm.com/acf4fc818357d9e20cf038350a69714b00ae2a44/satelliteLib-1af53d57402476e51191c3769b04b63017440a84".toUpperCase() ) );
+		responsePage.set_hasLegacyTranslation(pageSource != null && pageSource.toUpperCase().contains("s.account = s_account;".toUpperCase() ) );
+		responsePage.set_hasSatellitPageBottom(pageSource != null && pageSource.toUpperCase().contains("satellite.page_bottom".toUpperCase() ) );
+		
+		String str = pageSource.toUpperCase();
+		String findStr = "assets.adobedtm".toUpperCase();
+		int lastIndex = 0;
+		int count =0;
+		while(lastIndex != -1){
+		       lastIndex = str.indexOf(findStr,lastIndex);
+		       if( lastIndex != -1){
+		             count ++;
+		             lastIndex+=findStr.length();
+		      }
+		}
+		responsePage.set_satelliteLibCount(count);
+		
+		findStr = "satellite.page_bottom".toUpperCase();
+		lastIndex = 0;
+		count =0;
+		while(lastIndex != -1){
+		       lastIndex = str.indexOf(findStr,lastIndex);
+		       if( lastIndex != -1){
+		             count ++;
+		             lastIndex+=findStr.length();
+		      }
+		}
+		responsePage.set_satellitePageBottomCount(count);
+		
+		findStr = "var digitalData=".toUpperCase();
+		lastIndex = 0;
+		count =0;
+		while(lastIndex != -1){
+		       lastIndex = str.indexOf(findStr,lastIndex);
+		       if( lastIndex != -1){
+		             count ++;
+		             lastIndex+=findStr.length();
+		      }
+		}
+		responsePage.set_digitalDataJsonCount(count);
+
 		return responsePage;
 	}
 	
